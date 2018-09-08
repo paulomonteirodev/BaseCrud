@@ -1,0 +1,15 @@
+﻿<h2>Edit</h2>
+
+<div>
+    <label>
+        Name:
+        <input type="text" name="name" ng-model="book.Name" />
+    </label>
+    <br />
+    <label>
+        Select Author:
+        <select ng-model="book.AuthorId" ng-options="author.Id as author.Name for author in listAuthors"></select>
+    </label>
+    <br />
+    <button class="bnt btn-primary" ng-click="editBook(book)">Edit</button>
+</div>

@@ -1,0 +1,26 @@
+﻿<div class="container">
+    <a href="/books/new" class="btn btn-success">New</a>
+
+    <h2>List</h2>
+
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Author</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="item in listBooks">
+                <td>{{item.Id}}</td>
+                <td>{{item.Name}}</td>
+                <td>{{item.AuthorName}}</td>
+                <td class="text-center"><a href="/books/view/{{item.Id}}">details</a></td>
+                <td class="text-center"><a href="/books/edit/{{item.Id}}">Edit</a></td>
+                <td class="text-center"><a href="/books" ng-click="deleteBook(item.Id)">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+</div>

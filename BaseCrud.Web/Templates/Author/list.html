@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <a href="/authors/new" class="btn btn-success">New</a>
+
+    <h2>List</h2>
+
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="author in listAuthors">
+                <td>{{author.Id}}</td>
+                <td>{{author.Name}}</td>
+                <td class="text-center"><a href="/authors/view/{{author.Id}}">details</a></td>
+                <td class="text-center"><a href="/authors/edit/{{author.AuIdthorId}}">Edit</a></td>
+                <td class="text-center"><a href="/authors" ng-click="deleteAuthor(author.Id)">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
