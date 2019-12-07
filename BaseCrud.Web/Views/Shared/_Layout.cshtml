@@ -4,16 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <script src="~/Content/js/angular/angular.min.js"></script>
-    <script src="~/Content/js/angular/angular-route.min.js"></script>
-    <script src="~/App/app.js"></script>
+    @Scripts.Render("~/Content/js/angular/angular.min.js")
+    @Scripts.Render("~/Content/js/angular/angular-route.min.js")
+    @Scripts.Render("~/App/app.js")
     @Scripts.Render("~/angularServices")
-    @Scripts.Render("~/angularDirectives")
+    @*@Scripts.Render("~/angularDirectives")*@
     @Scripts.Render("~/angularControllers")
 
     @Styles.Render("~/Content/css")
-
-    <base href="/" />
 </head>
 <body ng-app="app">
     <div class="navbar navbar-inverse navbar-fixed-top">

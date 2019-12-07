@@ -1,18 +1,18 @@
 ﻿<h2>Insert</h2>
 
 <div>
-    <label>
+    <label for="book-name">
         Book Name:
-        <input type="text" name="name" ng-model="book.Name" />
     </label>
-    <br />
+    <input id="book-name" class="form-control" type="text" name="name" ng-model="book.Name" />
 
-    <label>
+    <label for="author-id">
         Select Author:
-        <select ng-model="book.AuthorId" ng-options="author.Id as author.Name for author in listAuthors">
-            <option value="" selected disabled>Select an Author</option>
-        </select>
     </label>
-    <br />
-    <button class="bnt btn-primary" ng-disabled="book.AuthorId == null" ng-click="createBook(book)">Insert</button>
+
+    <select id="author-id" class="form-control" ng-model="book.AuthorId" ng-options="author.Id as author.Name for author in listAuthors">
+        <option value="" selected disabled>Select an Author</option>
+    </select>
+
+    <button class="btn btn-primary margin-top" ng-disabled="book.AuthorId == null" ng-click="createBook(book)">Insert</button>
 </div>

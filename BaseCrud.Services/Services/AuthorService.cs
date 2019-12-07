@@ -13,12 +13,11 @@ namespace WebApiAngularServices
 
             using (var db = new Entities())
             {
-                dto = (from x in db.Author.ToList()
-                       select new AuthorViewModel
-                       {
-                           Id = x.Id,
-                           Name = x.Name
-                       }).ToList();
+                dto = db.Author.Select(x => new AuthorViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name
+                }).ToList();
             }
 
             return dto;
@@ -30,7 +29,7 @@ namespace WebApiAngularServices
 
             using (var db = new Entities())
             {
-                var author = db.Author.FirstOrDefault(x => x.Id == id);
+                var author = db.Author.Find(id);
 
                 dto.Id = author.Id;
                 dto.Name = author.Name;

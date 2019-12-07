@@ -15,8 +15,7 @@ namespace WebApiAngularServices
 
             using (var db = new Entities())
             {
-                dto = (from x in db.Book.ToList()
-                       select new BookViewModel
+                dto = db.Book.Select(x => new BookViewModel
                        {
                            AuthorId = x.AuthorId,
                            Id = x.Id,
@@ -34,7 +33,7 @@ namespace WebApiAngularServices
 
             using (var db = new Entities())
             {
-                var book = db.Book.FirstOrDefault(x => x.Id == id);
+                var book = db.Book.Find(id);
 
                 dto.Id = book.Id;
                 dto.AuthorId = book.AuthorId;

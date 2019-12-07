@@ -122,7 +122,7 @@
     <Compile Include="Services\BookService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebApiAngularDataCodeFirst\BaseCrud.Data.csproj">
+    <ProjectReference Include="..\BaseCrud.Data\BaseCrud.Data.csproj">
       <Project>{9f5f2984-29b6-4975-8a5a-23e9ebc42494}</Project>
       <Name>BaseCrud.Data</Name>
     </ProjectReference>

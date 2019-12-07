@@ -235,11 +235,11 @@
     <Content Include="Content\js\jquery\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebApiAngularDataCodeFirst\BaseCrud.Data.csproj">
+    <ProjectReference Include="..\BaseCrud.Data\BaseCrud.Data.csproj">
       <Project>{9f5f2984-29b6-4975-8a5a-23e9ebc42494}</Project>
       <Name>BaseCrud.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebApiAngularServices\BaseCrud.Services.csproj">
+    <ProjectReference Include="..\BaseCrud.Services\BaseCrud.Services.csproj">
       <Project>{5bae943f-b274-4b1e-8d5b-769ef53e1339}</Project>
       <Name>BaseCrud.Services</Name>
     </ProjectReference>

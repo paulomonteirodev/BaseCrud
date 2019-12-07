@@ -1,10 +1,11 @@
 ﻿<h2>Insert</h2>
 
 <div>
-    <label>
+    <label for="name">
         Name:
-        <input type="text" name="name" ng-model="author.Name" />
     </label>
 
-    <button class="bnt btn-primary" ng-click="createAuthor(author)">Insert</button>
+    <input id="name" class="form-control" type="text" name="name" ng-model="author.Name" />
+
+    <button class="btn btn-primary margin-top" ng-click="createAuthor(author)">Insert</button>
 </div>

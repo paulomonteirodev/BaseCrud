@@ -14,8 +14,8 @@ namespace WebApiAngular
             bundles.Add(new ScriptBundle("~/angularServices").Include(
                         "~/App/services/*.js"));
 
-            bundles.Add(new ScriptBundle("~/angularDirectives").Include(
-                        "~/App/directives/*.js"));
+            //bundles.Add(new ScriptBundle("~/angularDirectives").Include(
+            //            "~/App/directives/*.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Content/js/jquery/jquery-{version}.js"));

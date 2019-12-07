@@ -9,18 +9,6 @@ app.config(function ($routeProvider, $locationProvider) {
             })
 
         // Author
-        .when('/authors',
-            {
-                templateUrl: '/Templates/Author/list.html',
-                controller: 'AuthorListCtrl'
-            })
-
-        .when('/authors/new',
-            {
-                templateUrl: '/Templates/Author/create.html',
-                controller: 'AuthorCreateCtrl'
-            })
-
         .when('/authors/edit/:id',
             {
                 templateUrl: '/Templates/Author/edit.html',
@@ -33,18 +21,19 @@ app.config(function ($routeProvider, $locationProvider) {
                 controller: 'AuthorViewCtrl'
             })
 
-        // Books
-        .when('/books',
+        .when('/authors/new',
             {
-                templateUrl: '/Templates/Book/list.html',
-                controller: 'BookListCtrl'
+                templateUrl: '/Templates/Author/create.html',
+                controller: 'AuthorCreateCtrl'
             })
 
-        .when('/books/new',
+        .when('/authors',
             {
-                templateUrl: '/Templates/Book/create.html',
-                controller: 'BookCreateCtrl'
+                templateUrl: '/Templates/Author/list.html',
+                controller: 'AuthorListCtrl'
             })
+
+        // Books
 
         .when('/books/edit/:id',
             {
@@ -56,10 +45,25 @@ app.config(function ($routeProvider, $locationProvider) {
             {
                 templateUrl: '/Templates/Book/view.html',
                 controller: 'BookViewCtrl'
+            })
+
+        .when('/books/new',
+            {
+                templateUrl: '/Templates/Book/create.html',
+                controller: 'BookCreateCtrl'
+            })
+    
+        .when('/books',
+            {
+                templateUrl: '/Templates/Book/list.html',
+                controller: 'BookListCtrl'
             });
 
     // enable html5Mode for pushstate ('#'-less URLs)
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
 });
 
 
